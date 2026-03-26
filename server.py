@@ -57,7 +57,6 @@ async def sharepoint_lifespan(server: FastMCP) -> AsyncIterator[SharePointContex
 # Create MCP server at module level so CLI can find it
 mcp = FastMCP(APP_NAME, 
         lifespan=sharepoint_lifespan, 
-        stateless_http=True,
         transport_security=TransportSecuritySettings(
             enable_dns_rebinding_protection=False
         ))
