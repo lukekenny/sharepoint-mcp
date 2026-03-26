@@ -9,6 +9,7 @@ from collections.abc import AsyncIterator
 from datetime import datetime, timedelta
 
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 from auth.sharepoint_auth import SharePointContext, get_auth_context
 from config.settings import APP_NAME, DEBUG
