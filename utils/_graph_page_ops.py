@@ -23,7 +23,8 @@ class _GraphPageOpsMixin:
     ) -> Dict[str, Any]:
         """Create a modern page with professional layout in SharePoint."""
         endpoint = f"sites/{site_id}/pages"
-        data = {"name": name, "title": title, "layoutType": layout}
+        #data = {"name": name, "title": title, "layoutType": layout}
+        data = {"name": name, "title": title, "pageLayout": layout}
         logger.info(f"Creating modern page with name: {name}, layout: {layout}")
         return await self.post(endpoint, data)
 
