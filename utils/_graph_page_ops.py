@@ -25,10 +25,8 @@ class _GraphPageOpsMixin:
         endpoint = f"sites/{site_id}/pages"
         #data = {"name": name, "title": title, "layoutType": layout}
         data = {
-            "@odata.type": "#microsoft.graph.sitePage",
             "name": name,
             "title": title,
-            "pageLayout": "article"
         }
         logger.info(f"Creating modern page with name: {name}, layout: {layout}")
         return await self.post(endpoint, data)
